@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your shipment with Pan Logistics - fast, easy, and secure shipment booking for air, sea, and land freight.">
+    <meta name="keywords" content="book shipment, freight booking, logistics booking, cargo booking, Pan Logistics booking">
+    <meta name="author" content="Pan Logistics">
+    <meta name="robots" content="index, follow">
+    
+    <title>Book Shipment | Pan Logistics - Freight Forwarding & Logistics Canada</title>
+    
+    <link rel="icon" type="image/png" href="image/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .icon { width: 1em; height: 1em; fill: currentColor; }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/></svg>
+                </div>
+                <span>Pan Logistics</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="booking.html" class="nav-link active">Booking</a>
+                <a href="tracking.html" class="nav-link">Tracking</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <div class="nav-cta">
+                    <a href="booking.html" class="btn btn-primary btn-sm">Get Quote</a>
+                </div>
+            </nav>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE BANNER -->
+    <section class="page-banner">
+        <div class="page-banner-overlay"></div>
+        <div class="page-banner-content">
+            <h1>Book Your Shipment</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Booking</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING FORM SECTION -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <div class="booking-card">
+                    <div class="booking-header">
+                        <h2>Shipment Booking Form</h2>
+                        <p>Fill in the details below to book your shipment</p>
+                    </div>
+                    <div class="booking-body">
+                        <!-- Booking Form -->
+                        <form id="bookingForm">
+                            <!-- Sender Information -->
+                            <div class="booking-section-title">
+                                <svg class="icon" viewBox="0 0 24 24" style="width: 24px; height: 24px;"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                                Sender Information
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="senderName">Full Name *</label>
+                                    <input type="text" id="senderName" name="senderName" class="form-control" required placeholder="Enter your full name">
+                                    <span class="error-message">This field is required</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="senderCompany">Company Name</label>
+                                    <input type="text" id="senderCompany" name="senderCompany" class="form-control" placeholder="Optional">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="senderPhone">Phone Number *</label>
+                                    <input type="tel" id="senderPhone" name="senderPhone" class="form-control" required placeholder="+1 (416) 555-0123">
+                                    <span class="error-message">This field is required</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="senderEmail">Email Address *</label>
+                                    <input type="email" id="senderEmail" name="senderEmail" class="form-control" required placeholder="email@example.com">
+                                    <span class="error-message">Please enter a valid email</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="senderAddress">Sender Address *</label>
+                                <input type="text" id="senderAddress" name="senderAddress" class="form-control" required placeholder="Full pickup address">
+                                <span class="error-message">This field is required</span>
+                            </div>
+
+                            <!-- Receiver Information -->
+                            <div class="booking-section-title" style="margin-top: var(--spacing-xl);">
+                                <svg class="icon" viewBox="0 0 24 24" style="width: 24px; height: 24px;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                                Receiver Information
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="receiverName">Full Name *</label>
+                                    <input type="text" id="receiverName" name="receiverName" class="form-control" required placeholder="Recipient's full name">
+                                    <span class="error-message">This field is required</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="receiverPhone">Phone Number *</label>
+                                    <input type="tel" id="receiverPhone" name="receiverPhone" class="form-control" required placeholder="+1 (416) 555-0123">
+                                    <span class="error-message">This field is required</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="receiverAddress">Delivery Address *</label>
+                                <input type="text" id="receiverAddress" name="receiverAddress" class="form-control" required placeholder="Full delivery address">
+                                <span class="error-message">This field is required</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="receiverCountry">Country *</label>
+                                <select id="receiverCountry" name="receiverCountry" class="form-control" required>
+                                    <option value="">Select destination country</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="United States">United States</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="France">France</option>
+                                    <option value="China">China</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Mexico">Mexico</option>
+                                    <option value="India">India</option>
+                                    <option value="Brazil">Brazil</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <span class="error-message">Please select a country</span>
+                            </div>
+
+                            <!-- Shipment Details -->
+                            <div class="booking-section-title" style="margin-top: var(--spacing-xl);">
+                                <svg class="icon" viewBox="0 0 24 24" style="width: 24px; height: 24px;"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/></svg>
+                                Shipment Details
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="shipmentType">Shipment Type *</label>
+                                    <select id="shipmentType" name="shipmentType" class="form-control" required>
+                                        <option value="">Select shipment type</option>
+                                        <option value="Air Freight">Air Freight</option>
+                                        <option value="Sea Freight">Sea Freight</option>
+                                        <option value="Land Transport">Land Transport</option>
+                                    </select>
+                                    <span class="error-message">Please select a shipment type</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cargoType">Cargo Type *</label>
+                                    <select id="cargoType" name="cargoType" class="form-control" required>
+                                        <option value="">Select cargo type</option>
+                                        <option value="General Cargo">General Cargo</option>
+                                        <option value="Fragile Items">Fragile Items</option>
+                                        <option value="Perishable Goods">Perishable Goods</option>
+                                        <option value="Hazardous Materials">Hazardous Materials</option>
+                                        <option value="Oversized Cargo">Oversized Cargo</option>
+                                        <option value="Documents">Documents</option>
+                                    </select>
+                                    <span class="error-message">Please select cargo type</span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="weight">Weight (kg) *</label>
+                                    <input type="number" id="weight" name="weight" class="form-control" required placeholder="e.g., 150" min="1">
+                                    <span class="error-message">Please enter weight</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dimensions">Dimensions (L x W x H in cm)</label>
+                                    <input type="text" id="dimensions" name="dimensions" class="form-control" placeholder="e.g., 50 x 40 x 30">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pickupDate">Pickup Date *</label>
+                                    <input type="date" id="pickupDate" name="pickupDate" class="form-control" required>
+                                    <span class="error-message">Please select pickup date</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deliveryPriority">Delivery Priority *</label>
+                                    <select id="deliveryPriority" name="deliveryPriority" class="form-control" required>
+                                        <option value="">Select priority</option>
+                                        <option value="Standard">Standard (7-10 business days)</option>
+                                        <option value="Express">Express (3-5 business days)</option>
+                                        <option value="Urgent">Urgent (1-2 business days)</option>
+                                    </select>
+                                    <span class="error-message">Please select priority</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="specialInstructions">Special Instructions</label>
+                                <textarea id="specialInstructions" name="specialInstructions" class="form-control" rows="3" placeholder="Any special handling instructions, access requirements, etc."></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="booking-submit">
+                                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                                    <svg class="icon" viewBox="0 0 24 24" style="width: 20px; height: 20px;"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/></svg>
+                                    Book Shipment
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Success Message -->
+                        <div class="booking-success">
+                            <div class="success-icon">
+                                <svg class="icon" viewBox="0 0 24 24" style="width: 40px; height: 40px;"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            </div>
+                            <h3>Booking Confirmed!</h3>
+                            <p>Your shipment has been booked successfully. You will receive a confirmation email shortly.</p>
+                            <div class="tracking-result">
+                                <!-- Tracking result will be inserted here -->
+                            </div>
+                            <div style="margin-top: var(--spacing-xl); display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
+                                <a href="tracking.html" class="btn btn-primary">Track Shipment</a>
+                                <button onclick="location.reload()" class="btn btn-outline">Book Another</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING INFO SECTION -->
+    <section class="features-section section" style="background: var(--off-white);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Book With Pan Logistics</h2>
+                <p>Experience our premium booking service</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Instant Confirmation</h4>
+                        <p>Receive immediate booking confirmation and tracking number</p>
+                    </div>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Secure Booking</h4>
+                        <p>Your data is protected with enterprise-level security</p>
+                    </div>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Email Notifications</h4>
+                        <p>Get updates at every step of your shipment's journey</p>
+                    </div>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Insurance Coverage</h4>
+                        <p>Optional cargo insurance for peace of mind</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Help Booking?</h2>
+                <p>Our team is available to assist you with your booking process.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-secondary btn-lg">Contact Support</a>
+                    <a href="tel:+14165550123" class="btn btn-white btn-lg">Call Us Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/></svg>
+                        </div>
+                        <span>Pan Logistics</span>
+                    </div>
+                    <p>Your trusted partner for comprehensive logistics and freight forwarding solutions across Canada and worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="booking.html">Book Shipment</a></li>
+                        <li><a href="tracking.html">Track Shipment</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Air Freight</a></li>
+                        <li><a href="services.html">Sea Freight</a></li>
+                        <li><a href="services.html">Land Transport</a></li>
+                        <li><a href="services.html">Warehousing</a></li>
+                        <li><a href="services.html">Customs Clearance</a></li>
+                        <li><a href="services.html">Supply Chain Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li>123 Logistics Avenue</li>
+                        <li>Toronto, ON M5V 3A8</li>
+                        <li>Canada</li>
+                        <li style="margin-top: 1rem;">Phone: +1 (416) 555-0123</li>
+                        <li>Email: info@panlogistics.ca</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pan Logistics. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button class="back-to-top" aria-label="Back to top">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
