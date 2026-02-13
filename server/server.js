@@ -14,6 +14,7 @@ const authRoutes = require('./routes/auth');
 const bookingRoutes = require('./routes/bookings');
 const trackingRoutes = require('./routes/tracking');
 const contactRoutes = require('./routes/contact');
+const blogRoutes = require('./routes/blog');
 
 const User = require('./models/User');
 const Booking = require('./models/Booking');
@@ -136,6 +137,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/tracking', trackingRoutes);
 app.use('/api/contact', contactRoutes);
+app.use('/api/blog', blogRoutes);
 
 // Admin stats endpoint
 app.get('/api/admin/stats', async (req, res) => {

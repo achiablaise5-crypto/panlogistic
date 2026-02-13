@@ -432,6 +432,61 @@ p {
 }
 
 /* ==========================================================================
+   LANGUAGE TOGGLE
+   ========================================================================== */
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-left: var(--spacing-md);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--off-white);
+    border-radius: var(--radius-md);
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--medium-gray);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.lang-btn:hover {
+    color: var(--primary-color);
+}
+
+.lang-btn.active {
+    color: var(--primary-color);
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+}
+
+.lang-divider {
+    color: var(--medium-gray);
+    font-size: var(--font-size-xs);
+}
+
+/* Mobile language toggle */
+@media (max-width: 768px) {
+    .language-toggle {
+        margin-left: auto;
+        margin-right: var(--spacing-sm);
+        padding: var(--spacing-xs);
+    }
+    
+    .lang-btn {
+        padding: var(--spacing-xs);
+        font-size: var(--font-size-xs);
+    }
+}
+
+/* ==========================================================================
    HERO SECTION
    ========================================================================== */
 

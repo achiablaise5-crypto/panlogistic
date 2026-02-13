@@ -650,3 +650,92 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// ==========================================================================
+// LANGUAGE TOGGLE FUNCTIONALITY
+// ==========================================================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const langButtons = document.querySelectorAll('.lang-btn');
+    
+    if (langButtons.length === 0) return;
+    
+    // Get saved language or default to English
+    let currentLang = localStorage.getItem('preferredLanguage') || 'en';
+    
+    // Set initial active state
+    updateLanguageButtons(currentLang);
+    
+    // Add click handlers
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const lang = this.dataset.lang;
+            if (lang === currentLang) return;
+            
+            currentLang = lang;
+            localStorage.setItem('preferredLanguage', lang);
+            updateLanguageButtons(lang);
+            
+            // Apply translations
+            if (typeof applyTranslations === 'function') {
+                applyTranslations();
+            }
+            
+            // Dispatch custom event for other scripts to listen
+            window.dispatchEvent(new CustomEvent('languageChange', { detail: { language: lang } }));
+            
+            // Show notification
+            showLanguageNotification(lang);
+        });
+    });
+    
+    function updateLanguageButtons(activeLang) {
+        langButtons.forEach(btn => {
+            if (btn.dataset.lang === activeLang) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+    }
+    
+    function showLanguageNotification(lang) {
+        const langNames = { en: 'English', fr: 'Français' };
+        const langFlags = { en: '🇬🇧', fr: '🇫🇷' };
+        
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.style.cssText = `
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: var(--primary-color, #0056b3);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 9999;
+            animation: slideIn 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        `;
+        notification.innerHTML = `
+            <span style="font-size: 1.5rem;">${langFlags[lang]}</span>
+            <span>Langue changée en ${langNames[lang]}</span>
+        `;
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.style.animation = 'slideOut 0.3s ease forwards';
+            setTimeout(() => notification.remove(), 300);
+        }, 2000);
+    }
+    
+    // Listen for language changes from other scripts
+    window.addEventListener('languageChange', function(e) {
+        console.log('Language changed to:', e.detail.language);
+        // Add any additional language change handling here
+    });
+});
